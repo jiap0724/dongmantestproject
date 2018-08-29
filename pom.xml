@@ -196,7 +196,7 @@
             <version>2.7.1</version>  
             <configuration>
         		<suiteXmlFiles>
-          			<suiteXmlFile>/Users/Shared/Jenkins/Home/workspace/UI自动化project/src/test/java/TestReportXml/ExtentReport.xml</suiteXmlFile>
+          			<suiteXmlFile>/Users/Shared/Jenkins/Home/workspace/UIAutotestProject/src/test/java/TestReportXml/ExtentReport.xml</suiteXmlFile>
           			
         		</suiteXmlFiles>
 			</configuration>

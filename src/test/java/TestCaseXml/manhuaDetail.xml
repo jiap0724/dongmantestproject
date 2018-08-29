@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<unit id="manhuaDetail" desc="测试漫画作品阅读页 关注、下载、分享、评论、查看目录、阅读功能点">
+
+    <case 
+        id="case1" 
+        name="验证作品详情页，作品是否关注成功">
+        <step action="wait-forced" value="5000" desc="强制等待5秒"/>
+        <step action="android-click" locator="resource-id=com.weibo.comic:id/flyBanner" desc="点击banner"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>    
+        <step action="android-click" locator="text=关注"  desc="点击关注按钮"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-check" locator="text=已关注" expect="已关注"  message="关注成功" caseid="case1" desc="检查作品详情页 关注按钮变成已关注"/>
+        
+    </case>
+ 
+       <case 
+         id="case2" 
+        name="验证作品详情页，作品是否可以下载成功">
+        <step action="wait-forced" value="7000" desc="强制等待5秒"/>
+        <step action="android-click" locator="resource-id=com.weibo.comic:id/iv_download"  desc="点击下载icon"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/> 
+        <step action="android-click" locator="xpath=//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.RelativeLayout[2]"  desc="选择某一个章节"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="text=下载" desc="点击下载"/>
+        <step action="wait-forced" value="5000" desc="强制等待5秒"/>
+        <step action="android-check" locator="text=已下载" expect="已下载"  message="下载成功" caseid="case2" desc="检查作品是否下载成功"/> 
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="content-desc=转到上一层级" desc="返回上一级"/>  
+    </case>
+
+    
+ 	<case 
+         id="case3" 
+        name="验证作品详情页，分享作品">
+        <step action="wait-forced" value="5000" desc="强制等待5秒"/>
+        <step action="android-click" locator="resource-id=com.weibo.comic:id/iv_share"  desc="点击分享按钮"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="text=微博" desc="点击微博按钮"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="text=发送" desc="点击发送按钮"/>
+          
+    </case>
+    
+     <case 
+         id="case4" 
+        name="验证在作品详情页，排序功能是否正常">
+        <step action="wait-forced" value="5000" desc="强制等待5秒"/>
+        <step action="android-click" locator="text=目录" desc="点击目录按钮"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="resource-id=com.weibo.comic:id/viewOrder" desc="点击排序"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>    
+        <step action="android-click" locator="text=详情"  desc="点击详情"/>
+    </case> 
+    
+    <case 
+         id="case5" 
+        name="验证作品详情页，是否可以正常添加评论">
+        <step action="wait-forced" value="5000" desc="强制等待5秒"/>
+        <step action="slide-up" details="duration:2000;num:1;" desc="向上滑动1次，每次滑动时间2000毫秒"/>
+        <step action="android-click" locator="resource-id=com.weibo.comic:id/img_comment"  desc="点击评论按钮"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-input" locator="text=请输入您的评论" value="Very good comic works" desc="发表评论"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/> 
+        <step action="android-click" locator="text=发送" desc="点击发送按钮"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/> 
+        <step action="slide-up" details="duration:2000;num:1;" desc="向上滑动1次，每次滑动时间2000毫秒"/>
+        <step action="android-check" locator="text=Very good comic works" expect="Very good comic works"  message="发布评论成功" caseid="case5" desc="检查作品详情页品论内容是否添加成功"/>    
+    </case>
+    
+    <case 
+         id="case6" 
+        name="验证作品详情，阅读作品">
+        <step action="wait-forced" value="5000" desc="强制等待5秒"/>
+        <step action="android-click" locator="text=开始阅读" desc="点击阅读按钮"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/> 
+        <step action="android-click" locator="class=android.widget.ImageView" desc="点击作品页"/>
+        <step action="android-check" locator="text=下一章" expect="下一章"  message="进入阅读页" caseid="case6" desc="检查是否进入到阅读页面，是否出现下一章文案"/>    
+      
+    </case>
+    
+     <case 
+         id="case7" 
+        name="验证作品阅读页上下滑动">
+        <step action="wait-forced" value="5000" desc="强制等待5秒"/>
+        <step action="slide-up" details="duration:500;num:5;" desc="向上滑动5次，每次滑动时间500毫秒"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/> 
+        <step action="slide-down" details="duration:500;num:5;" desc="向上滑动5次，每次滑动时间500毫秒"/>
+        
+    </case>
+</unit>

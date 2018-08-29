@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [TestCases.manhuaTest]">
+  <test name="Command line test" preserve-order="false">
+    <classes>
+      <class name="TestCases.manhuaTest"/>
+    </classes>
+  </test> <!-- Command line test -->
+  <test name="Command line test(failed)">
+    <classes>
+      <class name="TestCases.manhuaTest">
+        <methods>
+          <include name="case6"/>
+          <include name="case7"/>
+          <include name="case4"/>
+          <include name="case5"/>
+          <include name="case2"/>
+          <include name="case3"/>
+          <include name="TearDown"/>
+          <include name="case1"/>
+          <include name="case11"/>
+          <include name="case12"/>
+          <include name="case8"/>
+          <include name="case9"/>
+          <include name="stup"/>
+        </methods>
+      </class> <!-- TestCases.manhuaTest -->
+    </classes>
+  </test> <!-- Command line test(failed) -->
+</suite> <!-- Failed suite [TestCases.manhuaTest] -->

@@ -1,0 +1,43 @@
+Manifest-Version: 1.0
+Built-By: jiapeng
+Class-Path: lib/testng-6.9.10.jar lib/jcommander-1.48.jar lib/bsh-2.0b
+ 4.jar lib/java-client-3.3.0.jar lib/gson-2.2.4.jar lib/httpclient-4.3
+ .3.jar lib/httpcore-4.3.2.jar lib/commons-logging-1.1.3.jar lib/guava
+ -17.0.jar lib/cglib-3.1.jar lib/asm-4.2.jar lib/commons-validator-1.4
+ .1.jar lib/commons-beanutils-1.8.3.jar lib/commons-digester-1.8.1.jar
+  lib/selenium-java-2.53.0.jar lib/selenium-chrome-driver-2.53.0.jar l
+ ib/selenium-remote-driver-2.53.0.jar lib/cglib-nodep-2.1_3.jar lib/se
+ lenium-api-2.53.0.jar lib/selenium-edge-driver-2.53.0.jar lib/commons
+ -io-2.4.jar lib/commons-exec-1.3.jar lib/selenium-firefox-driver-2.53
+ .0.jar lib/selenium-ie-driver-2.53.0.jar lib/jna-4.1.0.jar lib/jna-pl
+ atform-4.1.0.jar lib/selenium-safari-driver-2.53.0.jar lib/netty-3.5.
+ 7.Final.jar lib/selenium-support-2.53.0.jar lib/selenium-leg-rc-2.53.
+ 0.jar lib/selenium-server-2.53.0.jar lib/bcprov-jdk15on-1.48.jar lib/
+ bcpkix-jdk15on-1.48.jar lib/mx4j-tools-3.0.1.jar lib/jetty-repacked-9
+ .2.13.v20150730.jar lib/javax.servlet-api-3.1.0.jar lib/jetty-rc-repa
+ cked-5.jar lib/jcip-annotations-1.0.jar lib/snakeyaml-1.8.jar lib/com
+ mons-codec-1.10.jar lib/rest-assured-3.0.5.jar lib/groovy-2.4.9.jar l
+ ib/groovy-xml-2.4.9.jar lib/httpmime-4.5.1.jar lib/hamcrest-core-1.3.
+ jar lib/hamcrest-library-1.3.jar lib/tagsoup-1.2.1.jar lib/json-path-
+ 3.0.5.jar lib/groovy-json-2.4.9.jar lib/rest-assured-common-3.0.5.jar
+  lib/xml-path-3.0.5.jar lib/commons-lang3-3.4.jar lib/json-schema-val
+ idator-2.8.0.jar lib/json-schema-validator-2.2.6.jar lib/jsr305-3.0.0
+ .jar lib/joda-time-2.3.jar lib/libphonenumber-6.2.jar lib/json-schema
+ -core-1.2.5.jar lib/uri-template-0.9.jar lib/msg-simple-1.1.jar lib/b
+ tf-1.2.jar lib/jackson-coreutils-1.8.jar lib/jackson-databind-2.2.3.j
+ ar lib/jackson-annotations-2.2.3.jar lib/jackson-core-2.2.3.jar lib/r
+ hino-1.7R4.jar lib/mailapi-1.4.3.jar lib/activation-1.1.jar lib/jopt-
+ simple-4.6.jar lib/extentreports-2.40.2.jar lib/jsoup-1.8.3.jar lib/s
+ qlite-jdbc-3.8.11.1.jar lib/extentreports-3.0.3.jar lib/mongodb-drive
+ r-3.3.0.jar lib/bson-3.3.0.jar lib/mongodb-driver-core-3.3.0.jar lib/
+ freemarker-2.3.23.jar lib/guice-3.0.jar lib/javax.inject-1.jar lib/ao
+ palliance-1.0.jar lib/mongo-java-driver-3.3.0.jar lib/reportng-1.1.4.
+ jar lib/velocity-1.4.jar lib/velocity-dep-1.4.jar lib/saxon-8.7.jar l
+ ib/velocity-1.7.jar lib/commons-collections-3.2.1.jar lib/commons-lan
+ g-2.4.jar lib/jxl-2.6.jar lib/mysql-connector-java-5.1.44.jar lib/jsc
+ h-0.1.54.jar lib/log4j-1.2.16.jar lib/slf4j-api-1.6.6.jar lib/slf4j-l
+ og4j12-1.6.6.jar
+Build-Jdk: 1.8.0_144
+Created-By: Maven Integration for Eclipse
+Main-Class: TestCases.Main
+

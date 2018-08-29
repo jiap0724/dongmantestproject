@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Appium测试报告" parallel="false" configfailurepolicy ="continue">
+    <test name="微博漫画整体测试流程" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc"  enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
+        <classes>
+            <!-- <class name="TestCases.manhuaTest"/>
+            <methods>
+                    <include name="case1" />
+                    <include name="case2" />
+                    <include name="case3" />
+                    <include name="case4" />
+                    <include name="case5" />
+                    <include name="case6" />
+                    <include name="case7" />
+                    <include name="case8" />
+                    <include name="case9" />
+                    <include name="case11" />
+                    <include name="case12" />
+            </methods>        -->
+            <class name="TestCases.manhuajiapeng" />
+            <methods>
+            	<include name="test" />
+            </methods>
+        </classes> 
+    </test>
+    
+   <!--  <test name="查询" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc"  enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
+        <classes>
+            <class name="TestCases.manhuaTest"/>
+            <methods>
+                    <include name="case2" />
+					<include name="case3" />
+            </methods>       
+        </classes>
+    </test>
+    
+    <test name="关注" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc"  enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
+        <classes>
+            <class name="TestCases.manhuaTest"/>
+            <methods>
+                    <include name="case4" />
+            </methods>       
+        </classes>
+    </test>
+    
+    <test name="下载" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc"  enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
+        <classes>
+            <class name="TestCases.manhuaTest"/>
+            <methods>
+                    <include name="case5" />
+            </methods>       
+        </classes>
+    </test>
+   
+    <test name="分享" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc"  enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
+        <classes>
+            <class name="TestCases.manhuaTest"/>
+            <methods>
+                    <include name="case6" />
+            </methods>       
+        </classes>
+    </test>
+    
+    <test name="排序" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc"  enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
+        <classes>
+            <class name="TestCases.manhuaTest"/>
+            <methods>
+                    <include name="case7" />
+            </methods>       
+        </classes>
+    </test>
+    
+    <test name="添加评论" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc"  enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
+        <classes>
+            <class name="TestCases.manhuaTest"/>
+            <methods>
+                    <include name="case8" />
+            </methods>       
+        </classes>
+    </test>
+    
+    <test name="阅读" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc"  enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
+        <classes>
+            <class name="TestCases.manhuaTest"/>
+            <methods>
+                    <include name="case9" />
+            </methods>       
+        </classes>
+    </test>
+    
+    <test name="浏览作品" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc"  enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
+        <classes>
+            <class name="TestCases.manhuaTest"/>
+            <methods>
+                    <include name="case10" />
+            </methods>       
+        </classes>
+    </test>
+    
+    <test name="推出登录" junit="false" verbose="3" parallel="false" thread-count="5" annotations="javadoc"  enabled="true" skipfailedinvocationcounts="true" preserve-order="true" allow-return-values="true">
+        <classes>
+            <class name="TestCases.manhuaTest"/>
+            <methods>
+                    <include name="case11" />
+            </methods>       
+        </classes>
+    </test> -->
+    ------------------------------------------------------------------------------------------------------    
+    <!-- 调用的监听 -->    
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+    </listeners>      
+</suite>

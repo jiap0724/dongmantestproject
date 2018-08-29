@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<unit id="manhuaLogin" desc="测试微博漫画登录场景">
+
+    <case
+        id="case2" 
+        name="验证在Android系统中，顶部搜索框是否可以搜索出现有作品，没有搜索到作品">
+        <step action="wait-forced" value="5000" desc="强制等待5秒"/>
+        <step action="android-click" locator="text=搜索作品或者作者名称" desc="点击搜索框" expect="跳转到搜索页"/>  
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-input" locator="text=请输入作品名或作者名" value="bug" desc="输入要搜索的作品名"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="text=搜索" desc="点击搜索"/>
+        <step action="android-check" locator="text=未搜索到任何相关内容" expect="未搜索到任何相关内容"  message="搜索失败" caseid="case2" desc="搜索的作品不存在"/>
+        <step action="wait-forced" value="5000" desc="强制等待5秒"/>
+    </case>
+    
+    <case
+    	id="case3"
+    	name="验证在Android系统中，顶部搜索框是否可以搜索出现有作品，搜索到作品">
+    	<step action="android-click" locator="resource-id=com.weibo.comic:id/imgDelete" desc="点击删除搜索框的内容" />
+    	<step action="wait-forced" value="2000" desc="强制等待2秒"/>
+    	<step action="android-input" locator="text=请输入作品名或作者名" value="2016" desc="输入要搜索的作品名"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="text=搜索" desc="点击搜索"/>
+        <step action="android-check" locator="text=父与子2016" expect="父与子2016"  message="搜索成功" caseid="case3" desc="搜索的作品成功"/>
+        <step action="wait-forced" value="5000" desc="强制等待5秒"/> 	
+    </case>
+
+</unit>

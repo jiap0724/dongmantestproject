@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<unit id="manhuaLogin" desc="测试微博漫画登录场景">
+
+    <case 
+        id="case1" 
+        name="验证在Android系统中，手机号正常登录，点击登录按钮后，可以正常进入登录界面">
+        <step action="wait-forced" value="10000" desc="强制等待10秒"/>
+        <step action="android-click" locator="text=我的" desc="点击我的"/>  
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="resource-id=com.weibo.comic:id/imgUserIcon" desc="点击user头像登录" expect="跳转到登录界面"/>  
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-input" locator="text=请输入手机号" value="19990001002" desc="输入正确的手机号"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-input" locator="resource-id=com.weibo.comic:id/textInputPassword" value="123456789" desc="输入正确的密码"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="text=登录" desc="点击登录按钮"/>
+        <step action="android-check" locator="text=我的关注" expect="我的关注"  message="登录成功" caseid="Case1" desc="检查在登录界面，输入正确的手机号和密码，点击登录按钮后，可以正常登录成功，我的界面，判断签到小女孩是否出现"/>
+        <step action="wait-forced" value="5000" desc="强制等待5秒"/>
+    </case>
+
+</unit>

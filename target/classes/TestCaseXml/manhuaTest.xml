@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<unit id="manhuaTest" desc="微博漫画自动化测试流程">
+
+    <case 
+        id="login" 
+        name="验证在Android系统中，手机号正常登录，点击登录按钮后，可以正常进入登录界面">
+        <!--  <step desc="开始case1测试"/>-->
+        <step action="wait-forced" value="5000" desc="强制等待5秒"/>
+        <step action="android-click" locator="text=我的" desc="点击我的"/>  
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="resource-id=com.weibo.comic:id/imgUserIcon" desc="点击user头像登录" expect="跳转到登录界面"/>  
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-input" locator="text=请输入手机号" value="19990001018" desc="输入正确的手机号"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-input" locator="resource-id=com.weibo.comic:id/textInputPassword" value="123456789" desc="输入正确的密码"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="text=登录" desc="点击登录按钮"/>
+        <step action="android-check" locator="text=关注作品" expect="关注作品"  message="登录成功" caseid="case1" desc="检查在登录界面，输入正确的手机号和密码，点击登录按钮后，可以正常跳转到我的界面"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <!--  <step action="android-click" locator="text=推荐" desc="点击推荐icon"/>-->
+    </case>
+    
+    <case
+        id="query" 
+        name="验证在Android系统中，顶部搜索框是否可以搜索出现有作品，没有搜索到作品">
+        
+        <step action="wait-forced" value="5000" desc="强制等待5秒"/>
+        <step action="android-click" locator="text=漫画" desc="点击漫画icon"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="text=搜索作品或者作者名称" desc="点击搜索框" expect="跳转到搜索页"/>  
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-input" locator="text=请输入作品名或作者名" value="bug" desc="输入要搜索的作品名"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="text=搜索" desc="点击搜索"/>
+        <step action="android-check" locator="text=未搜索到任何相关内容" expect="未搜索到任何相关内容"  message="搜索失败" caseid="case2" desc="搜索的作品不存在"/>
+        <step action="wait-forced" value="5000" desc="强制等待5秒"/>
+    </case>
+    
+    <case
+    	id="query1"
+    	name="验证在Android系统中，顶部搜索框是否可以搜索出现有作品，搜索到作品">
+    	
+    	<step action="android-click" locator="resource-id=com.weibo.comic:id/imgDelete" desc="点击删除搜索框的内容" />
+    	<step action="wait-forced" value="2000" desc="强制等待2秒"/>
+    	<step action="android-input" locator="text=请输入作品名或作者名" value="2016" desc="输入要搜索的作品名"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="text=搜索" desc="点击搜索"/>
+        <step action="android-check" locator="text=父与子2016" expect="父与子2016"  message="搜索成功" caseid="case3" desc="搜索的作品成功"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="resource-id=com.weibo.comic:id/imgDelete" desc="点击删除按钮"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="resource-id=com.weibo.comic:id/textCancel" desc="点击取消按钮"/>
+        <step action="wait-forced" value="5000" desc="强制等待5秒"/> 	
+    </case>
+    
+    <case 
+        id="zhuifan" 
+        name="验证作品详情页，作品是否追番成功">
+        
+        <step action="wait-forced" value="5000" desc="强制等待5秒"/>
+        <step action="android-click" locator="resource-id=com.weibo.comic:id/flyBanner" desc="点击banner"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>    
+        <step action="android-click" locator="resource-id=com.weibo.comic:id/btnFav"  desc="点击追番按钮"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-check" locator="text=已追番" expect="已追番"  message="关注成功" caseid="case4" desc="检查作品详情页 关注按钮变成已追番"/>
+        
+    </case>
+ 
+       <case 
+         id="download" 
+        name="验证作品详情页，作品是否可以下载成功">
+       
+        <step action="wait-forced" value="7000" desc="强制等待5秒"/>
+        <step action="android-click" locator="resource-id=com.weibo.comic:id/iv_download"  desc="点击下载icon"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/> 
+        <step action="android-click" locator="xpath=//android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.LinearLayout[1]/android.widget.FrameLayout[1]/android.widget.RelativeLayout[1]/android.support.v7.widget.RecyclerView[1]/android.widget.RelativeLayout[2]"  desc="选择某一个章节"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="text=下载" desc="点击下载"/>
+        <step action="wait-forced" value="10000" desc="强制等待10秒"/>
+        <step action="android-check" locator="text=已下载" expect="已下载"  message="下载成功" caseid="case5" desc="检查作品是否下载成功"/> 
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="content-desc=转到上一层级" desc="返回上一级"/>  
+    </case>
+
+    
+ 	<case 
+         id="share" 
+        name="验证作品详情页，分享作品">
+        
+        <step action="wait-forced" value="5000" desc="强制等待5秒"/>
+        <step action="android-click" locator="resource-id=com.weibo.comic:id/iv_share"  desc="点击分享按钮"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="text=微博" desc="点击微博按钮"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="text=发送" desc="点击发送按钮"/>
+          
+    </case>
+    
+     <case 
+         id="paixu" 
+        name="验证在作品详情页，排序功能是否正常">
+        
+        <step action="wait-forced" value="5000" desc="强制等待5秒"/>
+        <step action="android-click" locator="text=目录" desc="点击目录按钮"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="resource-id=com.weibo.comic:id/viewOrder" desc="点击排序"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>    
+        <step action="android-click" locator="text=详情"  desc="点击详情"/>
+    </case> 
+    
+    <case 
+         id="pinglun" 
+        name="验证作品详情页，是否可以正常添加评论">
+       
+        <step action="wait-forced" value="5000" desc="强制等待5秒"/>
+        <step action="slide-up" details="duration:2000;num:1;" desc="向上滑动1次，每次滑动时间2000毫秒"/>
+        <step action="android-click" locator="resource-id=com.weibo.comic:id/img_comment"  desc="点击评论按钮"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-input" locator="text=请输入您的评论" value="Very good comic works" desc="发表评论"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/> 
+        <step action="android-click" locator="text=发送" desc="点击发送按钮"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/> 
+        <step action="slide-up" details="duration:2000;num:1;" desc="向上滑动1次，每次滑动时间2000毫秒"/>
+        <step action="android-check" locator="text=Very good comic works" expect="Very good comic works"  message="发布评论成功" caseid="pinglun" desc="检查作品详情页品论内容是否添加成功"/>    
+    </case>
+    
+    <case 
+         id="read" 
+        name="验证作品详情，阅读作品">
+        
+        <step action="wait-forced" value="5000" desc="强制等待5秒"/>
+        <step action="android-click" locator="resource-id=com.weibo.comic:id/btnRead" desc="点击阅读按钮"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/> 
+        <step action="android-click" locator="class=android.widget.ImageView" desc="点击作品页"/>
+        <step action="android-check" locator="text=下一章" expect="下一章"  message="进入阅读页" caseid="read" desc="检查是否进入到阅读页面，是否出现下一章文案"/>    
+      
+    </case>
+    
+     <case 
+         id="huadong" 
+        name="验证作品阅读页上下滑动">
+        
+        <step action="wait-forced" value="5000" desc="强制等待5秒"/>
+        <step action="slide-up" details="duration:500;num:5;" desc="向上滑动5次，每次滑动时间500毫秒"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/> 
+        <step action="slide-down" details="duration:500;num:5;" desc="向滑下动5次，每次滑动时间500毫秒"/>
+        <step action="android-click" locator="content-desc=转到上一层级" desc="返回上一级"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/> 
+        <step action="android-click" locator="resource-id=com.weibo.comic:id/iv_back" desc="返回上一级"/>
+        
+        
+    </case>
+    
+    <case 
+         id="logout" 
+        name="验证账号推出登录">
+        
+        <step action="wait-forced" value="5000" desc="强制等待5秒"/>
+        <step action="android-click" locator="text=我的" desc="点击我的"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/> 
+        <step action="slide-up" details="duration:500;num:2;" desc="向上滑动2次，每次滑动时间500毫秒"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="resource-id=com.weibo.comic:id/relSetting" desc="点击设置"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="resource-id=com.weibo.comic:id/textSignOut" desc="点击推出登录按钮"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-click" locator="resource-id=com.weibo.comic:id/textOk" desc="点击确定按钮"/>
+        <step action="wait-forced" value="2000" desc="强制等待2秒"/>
+        <step action="android-check" locator="text=点击登录哦，亲！" expect="点击登录哦，亲！"  message="推出登录" caseid="logout" desc="检查是否推出成功"/>
+        
+    </case>
+
+</unit>

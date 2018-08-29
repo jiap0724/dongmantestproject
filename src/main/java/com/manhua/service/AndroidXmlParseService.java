@@ -78,13 +78,14 @@ public class AndroidXmlParseService {
 		// capabilities.setCapability("platformVersion", "6.0.1");
 
 
-		capabilities.setCapability("deviceName", "emulator-5554");
-		capabilities.setCapability("platformName", "Android");
-		capabilities.setCapability("platformVersion", "8.0.0");
-
 		// capabilities.setCapability("deviceName", "emulator-5554");
 		// capabilities.setCapability("platformName", "Android");
-		// capabilities.setCapability("platformVersion", "9");
+		// capabilities.setCapability("platformVersion", "8.0.0");
+
+//android 模拟器
+		capabilities.setCapability("deviceName", "emulator-5554");
+		capabilities.setCapability("platformName", "Android");
+		capabilities.setCapability("platformVersion", "9");
 
 		// 设置apk的包名
 		capabilities.setCapability("appPackage", "com.weibo.comic");
